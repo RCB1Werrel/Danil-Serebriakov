@@ -1,9 +1,2 @@
-﻿################################################################################
-# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
-################################################################################
-
-/ConsoleApplication1/ConsoleApplication1/Debug
-/ConsoleApplication3/ConsoleApplication3/Debug
-/ConsoleApplication3/Debug
-/lab01/Project1/ConsoleApplication1/Debug
-/lab01/Project1/Project1/Debug
+﻿Debug/
+.vs/
