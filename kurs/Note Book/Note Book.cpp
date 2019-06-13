@@ -8,8 +8,7 @@ using namespace std;
 template<class K, class V>
 class t_collection
 {
-	class element
-	{
+
 	public:
 		K key;
 		V value;
@@ -19,7 +18,7 @@ class t_collection
 			this->key = key;
 			this->value = value;
 		}
-	};
+	
 
 	int sizeCollection = 0;
 	element** array;
@@ -41,7 +40,7 @@ class t_collection
 		}
 		array = newArray;
 	}
-public:
+
 	t_collection()
 	{
 		sizeCollection = 0;
@@ -74,6 +73,7 @@ public:
 			inst.Add(key, *value);
 		return inp;
 	}
+	friend istream& operator >> (ostream& out, t_collection& inst)
 
 	int main()
 	{
