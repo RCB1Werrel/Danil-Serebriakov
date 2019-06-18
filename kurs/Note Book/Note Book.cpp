@@ -9,16 +9,16 @@ template<class K, class V>
 class t_collection
 {
 
-	public:
-		K key;
-		V value;
-		element() {}
-		element(K key, V value)
-		{
-			this->key = key;
-			this->value = value;
-		}
-	
+public:
+	K key;
+	V value;
+	element() {}
+	element(K key, V value)
+	{
+		this->key = key;
+		this->value = value;
+	};
+
 
 	int sizeCollection = 0;
 	element** array;
@@ -30,8 +30,7 @@ class t_collection
 			i = i + 1;
 		}
 		array = newArray;
-	}
-	void DecreaseArraySize()
+	};	void DecreaseArraySize()
 	{
 		element** newArray = new element * [sizeCollection - 1];
 		for (int i = 0; i < sizeCollection - 1) {
@@ -39,7 +38,7 @@ class t_collection
 			i = i + 1;
 		}
 		array = newArray;
-	}
+	};
 
 	t_collection()
 	{
@@ -49,33 +48,46 @@ class t_collection
 		{
 			array[i] = new CollectionElem();
 		}
-	}
+	};
 	int get_size()
 	{
 		return sizeCollection;
-	}
+	};
 	void add_value(V value, K key)
 	{
 		for (int i = 0; i < sizeCollection)
 		{
-			
+
 			if (key == array[i]->key)
 				array[i]->value = value;
 			i = i + 1;
 		}
+	};
+	void remove_elem(V value, K key, int i = 0)
+	{
+
 	}
+	void Add(K key, V value)
+	{
+		IncreaseArraySize();
+		array[sizeCollection] = new element(key, value);
+		sizeCollection = sizeCollection + 1;
+	};
 	friend istream& operator >> (istream& inp, t_collection& inst)
 	{
-			K key;
-			V* value = new V;
-			inp >> key;
-			inp >> *value;
-			inst.Add(key, *value);
+		K key;
+		V* value = new V;
+		inp >> key;
+		inp >> *value;
+		inst.Add(key, *value);
 		return inp;
-	}
-	friend istream& operator >> (ostream& out, t_collection& inst)
-
-	int main()
+	};
+	friend ostream& operator << (ostream& out, t_collection& onst)
 	{
 
+	};
+};
+	int main()
+	{
+		
 	}
